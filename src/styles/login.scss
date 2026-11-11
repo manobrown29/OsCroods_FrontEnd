@@ -1,0 +1,154 @@
+@use "./Abstracts/variables.scss" as *;
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-section {
+    background-color: var(--Background-dark);
+    transition: 0.5s;
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50%;
+
+
+    &.dark {
+        background-color: var(--Background-light);
+        transition: 0.5s;
+
+        h1, p, label {
+            color: var(--Text-light);
+        }
+
+        input[type="email"], 
+        input[type="password"] {
+            background-color: var(--Background-light);
+            color: var(--Text-light);
+        }
+
+    }
+}
+
+.image-section {
+    flex: 1;
+    background-image: url('../../src/assets/croods.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 24px;
+}
+
+h1 {
+    color: var(--Text-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--Background-light);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.input-group {
+    width: 100%;
+    max-width: 404px;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: slideUp 0.5s ease-out;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--Text-dark);
+    text-align: left;
+    font-weight: 500;
+
+}
+
+    
+.esqueceuSenha{
+    display: flex;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+        color: $orange;
+
+        &:hover{
+            color: $orange-hover;
+        }
+    }
+}
+
+
+
+input {
+    &[type="email"], 
+    &[type="password"] {
+        background-color: var(--Background-dark);
+        color: var(--Text-dark);
+        width: 404px;
+        height: 40px;
+        padding: 0 0.5rem;
+        border: 1px solid #dddfe2;
+        border-radius: 13px;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        font-family: "Inter", sans-serif;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+            border-color: $orange;
+            outline: none;
+            color: var(--Text-dark);
+        }
+    }
+}
+
+.Cadastrese {
+    color: $orange;
+}
+
+
+.login {
+    width: 404px;
+    height: 40px;
+    padding: 0;
+    background-color: $orange;
+    color: $white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover{
+        background-color: $orange-hover;
+    }
+
+}

@@ -1,0 +1,151 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-section {
+    background-color: var(--Background-dark);
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50%;
+    transition: background-color 0.5s ease, 0.5s;
+
+    &.dark {
+        background-color: var(--Background-light);
+        transition: 0.5s;
+
+        h1, p, label {
+            color: var(--Text-light);
+        }
+
+        input {
+            &[type="email"],
+            &[type="password"],
+            &[type="text"] {
+                background-color: var(--Background-light);
+                color: var(--Text-light);
+            }
+        }
+
+        .erro p {
+            color: var(--Purple);
+        }
+
+        .login {
+            color: var(--Purple);
+        }
+    }
+}
+
+
+.image-section {
+    flex: 1;
+    background-image: url('../../src/assets/croods.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 24px;
+}
+
+h1 {
+    color: var(--Text-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--Text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.input-group {
+    width: 100%;
+    max-width: 404px;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: slideUp 0.5s ease-out;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--Text-dark);
+    text-align: left;
+    font-weight: 500;
+}
+
+input {
+    &[type="text"],
+    &[type="email"],
+    &[type="password"] {
+        color: var(--Text-dark);
+        background-color: var(--Background-dark);
+        width: 404px;
+        height: 40px;
+        padding: 0 0.5rem;
+        border: 1px solid #dddfe2;
+        border-radius: 13px;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        font-family: "Inter", sans-serif;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+            border-color: var(--Purple);
+            box-shadow: 0 0 0 2px rgba(167, 41, 245, 0.2);
+            outline: none;
+            color: var(--Text-dark);
+        }
+    }
+}
+
+.Cadastrese {
+    color: $orange;
+}
+
+
+button[type="submit"] {
+    width: 404px;
+    height: 40px;
+    padding: 0;
+    background-color: var(--Purple);
+    color: var(--White);
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #b81631;
+    }
+}
+
+.login {
+    color: var(--Purple);
+}
