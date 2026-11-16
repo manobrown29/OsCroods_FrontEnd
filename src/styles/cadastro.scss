@@ -1,3 +1,6 @@
+@use "./Abstracts/variables.scss" as *;
+
+
 .container {
     display: flex;
     width: 100%;
@@ -7,7 +10,6 @@
 }
 
 .login-section {
-    background-color: var(--Background-dark);
     padding: 2rem;
     flex: 1;
     display: flex;
@@ -17,32 +19,6 @@
     text-align: center;
     max-width: 50%;
     transition: background-color 0.5s ease, 0.5s;
-
-    &.dark {
-        background-color: var(--Background-light);
-        transition: 0.5s;
-
-        h1, p, label {
-            color: var(--Text-light);
-        }
-
-        input {
-            &[type="email"],
-            &[type="password"],
-            &[type="text"] {
-                background-color: var(--Background-light);
-                color: var(--Text-light);
-            }
-        }
-
-        .erro p {
-            color: var(--Purple);
-        }
-
-        .login {
-            color: var(--Purple);
-        }
-    }
 }
 
 
@@ -52,10 +28,6 @@
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
-
-    &:hover {
-        transform: scale(1.02);
-    }
 }
 
 header {
@@ -66,13 +38,11 @@ header {
 }
 
 h1 {
-    color: var(--Text-dark);
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 p {
-    color: var(--Text-dark);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -82,7 +52,6 @@ p {
     max-width: 404px;
     margin-bottom: 1rem;
     position: relative;
-    animation: slideUp 0.5s ease-out;
 }
 
 label {
@@ -93,12 +62,11 @@ label {
     font-weight: 500;
 }
 
+
 input {
-    &[type="text"],
-    &[type="email"],
-    &[type="password"] {
-        color: var(--Text-dark);
-        background-color: var(--Background-dark);
+    &[type="email"], 
+    &[type="password"],
+    &[type="text"] {
         width: 404px;
         height: 40px;
         padding: 0 0.5rem;
@@ -106,46 +74,36 @@ input {
         border-radius: 13px;
         font-size: 1rem;
         margin-bottom: 0.5rem;
-        font-family: "Inter", sans-serif;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
         &:focus {
-            border-color: var(--Purple);
-            box-shadow: 0 0 0 2px rgba(167, 41, 245, 0.2);
+            border-color: $orange;
             outline: none;
-            color: var(--Text-dark);
         }
     }
 }
 
 .Cadastrese {
     color: $orange;
+    margin-left: 4px;
+    text-decoration: none;
 }
+
 
 
 button[type="submit"] {
     width: 404px;
     height: 40px;
     padding: 0;
-    background-color: var(--Purple);
-    color: var(--White);
     border: none;
     border-radius: 14px;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    font-family: "Inter", sans-serif;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
 
     &:hover {
-        background-color: #b81631;
+        background-color: $orange-hover;
     }
-}
-
-.login {
-    color: var(--Purple);
 }

@@ -19,13 +19,12 @@ export default function Router() {
                         </div>
                         <input type="password" id="password" name="password" placeholder="Digite sua senha"/>
                     </div>
-                    <Link to="/cadastro" className="login">
+                    <Link to="#" className="login">
                         Login
                     </Link>
-                    <p>Não tem uma conta? <a class="Cadastrese">Cadastre-se</a></p>
-                    <div className="tema">
-                        <label for="checkboxInput" class="toggleSwitch"></label>
-                    </div>
+                    <p>Não tem uma conta? 
+                        <Link to="/cadastro" className="Cadastrese">Cadastre-se</Link>
+                    </p>
 
                 </form>
             </div>

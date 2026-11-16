@@ -5,11 +5,9 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    animation: fadeIn 0.5s ease-out;
 }
 
 .login-section {
-    background-color: var(--Background-dark);
     transition: 0.5s;
     padding: 2rem;
     flex: 1;
@@ -20,22 +18,6 @@
     text-align: center;
     max-width: 50%;
 
-
-    &.dark {
-        background-color: var(--Background-light);
-        transition: 0.5s;
-
-        h1, p, label {
-            color: var(--Text-light);
-        }
-
-        input[type="email"], 
-        input[type="password"] {
-            background-color: var(--Background-light);
-            color: var(--Text-light);
-        }
-
-    }
 }
 
 .image-section {
@@ -44,7 +26,7 @@
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
-
+    border-radius: 15px 0 0 15px;
 }
 
 header {
@@ -55,13 +37,11 @@ header {
 }
 
 h1 {
-    color: var(--Text-dark);
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 p {
-    color: var(--Background-light);
     margin-bottom: 1.5rem;
     font-weight: 500;
     margin-top: 1.5rem;
@@ -72,13 +52,11 @@ p {
     max-width: 404px;
     margin-bottom: 1rem;
     position: relative;
-    animation: slideUp 0.5s ease-out;
 }
 
 label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--Text-dark);
     text-align: left;
     font-weight: 500;
 
@@ -99,10 +77,10 @@ label {
 }
 
 
-
 input {
     &[type="email"], 
-    &[type="password"] {
+    &[type="password"],
+    &[type="text"] {
         background-color: var(--Background-dark);
         color: var(--Text-dark);
         width: 404px;
@@ -126,6 +104,8 @@ input {
 
 .Cadastrese {
     color: $orange;
+    margin-left: 4px;
+    text-decoration: none;
 }
 
 
