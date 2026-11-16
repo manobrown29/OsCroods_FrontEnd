@@ -1,0 +1,60 @@
+@use "./Abstracts/variables.scss" as *;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    background-color: $brown;
+    padding-left: 15px;
+    .logoTipo{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        h1{
+            color: $white;
+            font-size: 25px;
+            margin: 0;
+            margin-left: 15px;
+        }
+    }
+
+    nav{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        .opcao{
+            text-decoration: none;
+        }
+        p{
+            margin-top: 1px;
+            color: $white;
+            font-size: 15px;
+            padding: 8px;
+            text-decoration: none;
+            &:hover{
+                background-color: $orange;
+                padding: 8px;
+                border-radius: 10px;
+                width: 250px;
+            }
+        }
+    }
+
+    .sair{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 335px;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        h1{
+            margin: 0;
+            color: $white;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+}
