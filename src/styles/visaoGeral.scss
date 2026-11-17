@@ -1,78 +1,187 @@
 @use "./Abstracts/variables.scss" as *;
 
-.pai{
-    flex: 1;
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: $background;
+}
+
+.pai {
     display: flex;
     flex-direction: column;
     background-color: $blue;
     padding-left: 15px;
     justify-content: space-between;
     height: 100vh;
-    width: 17%;
-    .logoTipo{
+    width: 20%; 
+    
+    .logoTipo {
         display: flex;
         align-items: center;
         margin-left: 5px;
         margin-top: 15px;
-        .nomeLogo{
+        
+        .nomeLogo {
             display: flex;
             flex-direction: column;
         }
-        h1{
+        
+        h1 {
             color: $white;
             font-size: 25px;
             margin: 0;
             margin-left: 18px;
         }
-        p{
+        
+        p {
             margin: 0;
             margin-top: -10px;
             margin-left: 18px;
             color: $white;
         }
-        img{
+        
+        img {
             width: 80px;
-
         }
     }
 
-    nav{
+    nav {
         display: flex;
         flex-direction: column;
-        padding-bottom: 550px;
-        .opcao{
+        padding-bottom: 550px; 
+        
+        .opcao {
             text-decoration: none;
         }
-        p{
+        
+        p {
             color: $white;
             font-size: 15px;
             padding: 10px;
             text-decoration: none;
             margin-top: -10px;
-            &:hover{
+            
+            &:hover {
                 background-color: $red;
                 padding: 10px;
                 border-radius: 5px;
-                width: 250px;
+                width: 90%;
             }
         }
     }
 
-    .sair{
+    .sair {
         display: flex;
         flex-direction: row;
         align-items: center;
         text-decoration: none;
         margin-bottom: 10px;
-        img{
+        
+        img {
             width: 30px;
             height: 30px;
         }
-        h1{
+        
+        h1 {
             margin: 0;
             color: $white;
             font-size: 20px;
             margin-left: 15px;
+        }
+    }
+}
+
+.corpo {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+
+    h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #1a1a1a;
+    }
+
+    // Estilo base para todos os cards e caixas brancas
+    .card, .pedidos-andamento, .vendas-hora, .alertas-estoque {
+        background-color: #ffffff; // Corrigido para branco puro (ou use #F8F9FA)
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.02); // Opcional: sombra leve
+    }
+
+    .dashboard-layout {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+
+        // COLUNA ESQUERDA (Cards principais + Tabela)
+        .coluna-esquerda {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: calc(70% - 10px); // Subtrai metade do gap
+
+            .dashboard-cards-esquerdo {
+                display: flex;
+                gap: 20px;
+                width: 100%;
+
+                .card {
+                    flex: 1;
+                    
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        color: #555;
+                        font-weight: 600;
+                    }
+
+                    h2 {
+                        margin: 10px 0 0 0;
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .pedidos-andamento {
+                height: 570px;
+            }
+        }
+
+        // COLUNA DIREITA (Na Fila + Gráficos)
+        .coluna-direita {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: calc(30% - 10px); // Subtrai metade do gap
+
+            .card.destaque {
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    color: $red;
+                    font-weight: 600;
+                }
+
+                h2 {
+                    margin: 10px 0 0 0;
+                    font-size: 24px;
+                }
+            }
+
+            .vendas-hora {
+                min-height: 200px;
+            }
+
+            .alertas-estoque {
+                height: 350px;
+                flex-grow: 1; // Preenche o resto do espaço para alinhar com a tabela
+            }
         }
     }
 }
