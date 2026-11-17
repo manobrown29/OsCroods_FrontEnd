@@ -72,9 +72,9 @@ label {
 .esqueceuSenha{
     display: flex;
     justify-content: space-between;
-    a{
-        text-decoration: none;
+    .a{
         color: $red;
+            text-decoration: none;
 
         &:hover{
             color: $hover;
@@ -109,6 +109,9 @@ input {
     color: $red;
     margin-left: 4px;
     text-decoration: none;
+    &:hover{
+        color: $hover;
+    }
 }
 
 

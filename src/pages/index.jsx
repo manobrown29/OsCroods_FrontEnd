@@ -18,11 +18,13 @@ export default function Router() {
                     <div class="input-group">
                         <div className="esqueceuSenha">
                             <label for="password">Senha:</label>
-                            <a href="">Esqueci minha senha</a>
+                            <Link to="/esquecerSenha" className="a">
+                                Esqueci minha senha
+                            </Link>
                         </div>
                         <input type="password" id="password" name="password" placeholder="Digite sua senha"/>
                     </div>
-                    <Link to="#" className="login">
+                    <Link to="/visaoGeral" className="login">
                         Login
                     </Link>
                     <p>Não tem uma conta? 
