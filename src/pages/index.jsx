@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
 import "../styles/login.scss"
+import logo from "../assets/logo.png"
+
 
 export default function Router() {
     return (
         <div className="container">
             <div className="login-section">
+                <img src={logo} alt="" />
                 <h1>Bem vindo de volta!</h1>
                 <p>Insira suas credenciais para acessar sua conta:</p>
                 <form id="loginForm" th:object="${user}" method="post" th:action="@{/login}">

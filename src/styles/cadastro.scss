@@ -7,6 +7,9 @@
     height: 100vh;
     overflow: hidden;
     animation: fadeIn 0.5s ease-out;
+    img{
+        width: 150px;
+    }
 }
 
 .login-section {
@@ -24,7 +27,7 @@
 
 .image-section {
     flex: 1;
-    background-image: url('../../src/assets/croods.jpg');
+    background-image: url('../../src/assets/fundo.jpg');
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
@@ -57,7 +60,6 @@ p {
 label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--Text-dark);
     text-align: left;
     font-weight: 500;
 }
@@ -76,14 +78,14 @@ input {
         margin-bottom: 0.5rem;
 
         &:focus {
-            border-color: $orange;
+            border-color: $red;
             outline: none;
         }
     }
 }
 
 .Cadastrese {
-    color: $orange;
+    color: $red;
     margin-left: 4px;
     text-decoration: none;
 }
@@ -104,6 +106,6 @@ button[type="submit"] {
     justify-content: center;
 
     &:hover {
-        background-color: $orange-hover;
+        background-color: $hover;
     }
 }

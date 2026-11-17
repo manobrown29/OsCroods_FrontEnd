@@ -6,7 +6,7 @@ import "../styles/visaoGeral.scss"
 
 export default function Router() {
     return (
-        <div className="container">
+        <div className="pai">
             <div className="logoTipo">
                 <img src={logo} alt="" />
                 <h1>Hot Croods</h1>

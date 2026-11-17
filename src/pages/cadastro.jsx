@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
 import "../styles/cadastro.scss"
+import logo from "../assets/logo.png"
 
 export default function Router() {
     return (
         <div class="container">
         <div class="login-section">
+        <img src={logo} alt="" />
         <h1>Crie sua conta</h1>
         <p>Preencha os campos abaixo para criar sua conta:</p>
         <form id="registerForm" method="post">
