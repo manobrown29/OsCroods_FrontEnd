@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import sair from "../assets/sair.png"
 import logoFundoBranco from "../assets/logoFundoBranco.png"
 
 import "../styles/visaoGeral.scss"
 
 export default function Router() {
+
     return (
         <div className="layout-container">
 
@@ -13,22 +14,23 @@ export default function Router() {
                     <img src={logoFundoBranco} alt="" />
                     <div className="nomeLogo">
                         <h1>Cantina</h1>
-                        <p>CRUUD´s</p>
+                        <p>CRUUD's</p>
                     </div>
                 </div>
                 <nav>
-                    <Link to="#" className="opcao">
+                    <NavLink to="/visaoGeral" className="opcao">
                         <p>Visão geral</p>
-                    </Link>
-                    <Link to="#" className="opcao">
+                    </NavLink>
+
+                    <NavLink to="/cardapio" className="opcao">
                         <p>Cardápio</p>
-                    </Link>
+                    </NavLink>
                 </nav>
                 <div className="sair">
-                    <Link to="#" className="sair">
+                    <NavLink to="/" className="sair">
                         <img src={sair} alt="" />
                         <h1>Sair</h1>
-                    </Link>
+                    </NavLink>
                 </div>
             </div>
             <div className="corpo">

@@ -48,26 +48,33 @@
     }
 
     nav {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 550px; 
-        
-        .opcao {
-            text-decoration: none;
-        }
-        
-        p {
-            color: $white;
-            font-size: 15px;
-            padding: 10px;
-            text-decoration: none;
-            margin-top: -10px;
-            
-            &:hover {
-                background-color: $red;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 550px;
+
+    .opcao {
+        text-decoration: none;
+        width: 90%;
+
+            p {
+                color: $white;
+                font-size: 15px;
                 padding: 10px;
-                border-radius: 5px;
-                width: 90%;
+                margin-top: -10px;
+            }
+
+            &:hover {
+                p {
+                    background-color: $red;
+                    border-radius: 5px;
+                }
+            }
+
+            &.active {
+                p {
+                    background-color: $red;
+                    border-radius: 5px;
+                }
             }
         }
     }
@@ -103,28 +110,24 @@
     h1 {
         margin: 0;
         font-size: 28px;
-        color: #1a1a1a;
+        color: $title-color;
     }
 
-    // Estilo base para todos os cards e caixas brancas
     .card, .pedidos-andamento, .vendas-hora, .alertas-estoque {
-        background-color: #ffffff; // Corrigido para branco puro (ou use #F8F9FA)
+        background-color: $white; 
         border-radius: 12px;
         padding: 20px;
-        box-shadow: 0px 2px 4px rgba(0,0,0,0.02); // Opcional: sombra leve
     }
 
     .dashboard-layout {
         display: flex;
         gap: 20px;
         width: 100%;
-
-        // COLUNA ESQUERDA (Cards principais + Tabela)
         .coluna-esquerda {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: calc(70% - 10px); // Subtrai metade do gap
+            width: calc(70% - 10px); 
 
             .dashboard-cards-esquerdo {
                 display: flex;
@@ -153,12 +156,11 @@
             }
         }
 
-        // COLUNA DIREITA (Na Fila + Gráficos)
         .coluna-direita {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: calc(30% - 10px); // Subtrai metade do gap
+            width: calc(30% - 10px); 
 
             .card.destaque {
                 p {
@@ -180,7 +182,7 @@
 
             .alertas-estoque {
                 height: 350px;
-                flex-grow: 1; // Preenche o resto do espaço para alinhar com a tabela
+                flex-grow: 1; 
             }
         }
     }

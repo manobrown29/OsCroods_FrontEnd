@@ -14,7 +14,7 @@ export default function Router() {
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/esquecerSenha" element={<EsquecerSenha />} />
                 <Route path="/visaoGeral" element={<Visaogeral />} />
-                <Route path="/cardapio" element={<Cardapio/>} />
+                <Route path="/cardapio" element={<Cardapio />} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </BrowserRouter>
