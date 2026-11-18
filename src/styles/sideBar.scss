@@ -1,0 +1,93 @@
+@use "./Abstracts/variables.scss" as *;
+
+.pai {
+    display: flex;
+    flex-direction: column;
+    background-color: $blue;
+    padding-left: 15px;
+    justify-content: space-between;
+    height: 100vh;
+    width: 20%;
+
+    .logoTipo {
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        margin-top: 15px;
+
+        .nomeLogo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: $white;
+            font-size: 25px;
+            margin: 0;
+            margin-left: 18px;
+        }
+
+        p {
+            margin: 0;
+            margin-top: -10px;
+            margin-left: 18px;
+            color: $white;
+        }
+
+        img {
+            width: 80px;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 550px;
+
+        .opcao {
+            text-decoration: none;
+            width: 90%;
+
+            p {
+                color: $white;
+                font-size: 15px;
+                padding: 10px;
+                margin-top: -10px;
+            }
+
+            &:hover {
+                p {
+                    background-color: $red;
+                    border-radius: 5px;
+                }
+            }
+
+            &.active {
+                p {
+                    background-color: $red;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .sair {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 10px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            color: $white;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+    }
+}

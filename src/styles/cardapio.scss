@@ -1,137 +1,58 @@
 @use "./Abstracts//variables.scss" as *;
 
-.pai {
-    display: flex;
-    flex-direction: column;
-    background-color: $blue;
-    padding-left: 15px;
-    justify-content: space-between;
-    height: 100vh;
-    width: 20%;
 
-    .logoTipo {
-        display: flex;
-        align-items: center;
-        margin-left: 5px;
-        margin-top: 15px;
-
-        .nomeLogo {
-            display: flex;
-            flex-direction: column;
-        }
-
-        h1 {
-            color: $white;
-            font-size: 25px;
-            margin: 0;
-            margin-left: 18px;
-        }
-
-        p {
-            margin: 0;
-            margin-top: -10px;
-            margin-left: 18px;
-            color: $white;
-        }
-
-        img {
-            width: 80px;
-        }
-        
+.cardapio-title {
+    p {
+        margin-top: 0;
     }
 
-    nav {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 550px;
-
-            .opcao {
-                text-decoration: none;
-            }
-
-            p {
-                color: $white;
-                font-size: 15px;
-                padding: 10px;
-                text-decoration: none;
-                margin-top: -10px;
-
-                &:hover {
-                    background-color: $red;
-                    padding: 10px;
-                    border-radius: 5px;
-                    width: 90%;
-                }
-            }
-        }
-
-           .sair {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-decoration: none;
-        margin-bottom: 10px;
-        
-        img {
-            width: 30px;
-            height: 30px;
-        }
-        
-        h1 {
-            margin: 0;
-            color: $white;
-            font-size: 20px;
-            margin-left: 15px;
-        }
+    h1 {
+        margin: 0;
     }
 }
 
-    .cardapio-title {
-        p {
-            margin-top: 0;
-        }
+.cardapio-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: $background;
+}
 
-        h1 {
-            margin: 0;
-        }
-    }
+.cardapio-body {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
 
-    .cardapio-container {
-        display: flex;
-        flex-direction: row;
-        min-height: 100vh;
-        width: 100vw;
-        background-color: $background;
+    h1 {
+        margin: 0;
+        font-size: 28px;
+        color: $title-color;
     }
+}
 
-    .cardapio-body {
-        width: 90%;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-    }
+.cardapio-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+    gap: 50px;
+}
 
-    .cardapio-space {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        height: 90%;
-        gap: 50px;
-    }
+.cardapio-produtos {
+    background-color: $white;
+    height: 90%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+}
 
-    .cardapio-produtos {
-        background-color: $white;
-        height: 90%;
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
-    }
-
-    .cardapio-editar {
-        background-color: $white;
-        height: 90%;
-        width: 40%;
-        border-radius: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
-    }
+.cardapio-editar {
+    background-color: $white;
+    height: 90%;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+}
