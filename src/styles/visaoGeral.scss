@@ -63,13 +63,6 @@
                 margin-top: -10px;
             }
 
-            &:hover {
-                p {
-                    background-color: $red;
-                    border-radius: 5px;
-                }
-            }
-
             &.active {
                 p {
                     background-color: $red;
