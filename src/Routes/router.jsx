@@ -8,7 +8,7 @@ import NotFound from "../pages/notFound"
 
 export default function Router() {
     return (
-        <BrowserRouter>     
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />

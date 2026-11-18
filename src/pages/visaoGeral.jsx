@@ -13,14 +13,14 @@ export default function Router() {
                     <img src={logoFundoBranco} alt="" />
                     <div className="nomeLogo">
                         <h1>Cantina</h1>
-                        <p>CRUUD´s</p>
+                        <p>CRUUD's</p>
                     </div>
                 </div>
                 <nav>
-                    <Link to="#" className="opcao">
+                    <Link to="/visaoGeral" className="opcao">
                         <p>Visão geral</p>
                     </Link>
-                    <Link to="#" className="opcao">
+                    <Link to="/cardapio" className="opcao">
                         <p>Cardápio</p>
                     </Link>
                 </nav>
