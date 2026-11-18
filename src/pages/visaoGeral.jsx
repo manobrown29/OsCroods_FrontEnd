@@ -18,10 +18,10 @@ export default function Router() {
                     </div>
                 </div>
                 <nav>
-                    <Link to="/visaoGeral" className="opcao">
+                    <NavLink to="/visaoGeral" className="opcao">
                         <p>Visão geral</p>
-                    </Link>
-                    <Link to="/cardapio" className="opcao">
+                    </NavLink>
+                    <NavLink to="/cardapio" className="opcao">
                         <p>Cardápio</p>
                     </NavLink>
                 </nav>
